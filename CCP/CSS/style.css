@@ -1,0 +1,404 @@
+:root {
+  --primary-color: #1d3452;
+  --secondary-color: #4f88f1;
+  --accent-color: #726363;
+  --tree-color: #ce595b;
+}
+
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--primary-color);
+}
+
+p {
+  color: var(--accent-color);
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilos da navbar */
+.navbar {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Alinha verticalmente */
+  background-color: var(--primary-color); /* Cinza escuro */
+  padding: 20px;
+  color: #fff;
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Alinha verticalmente */
+}
+
+.navbar-links li {
+  margin-left: 20px;
+}
+
+.navbar-links li a {
+  position: relative;
+}
+
+.navbar-links li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #f84242;
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navbar-links li a:hover::before {
+  transform: scaleX(1);
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menu-icon__bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 3px 0;
+  transition: transform 0.3s ease;
+}
+
+/* Estilos para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .navbar-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+  }
+
+  .navbar-links.active {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Centraliza verticalmente */
+      align-items: center; /* Alinha horizontalmente */
+  }
+
+  .navbar-links li {
+      margin: 10px 0;
+  }
+
+  .menu-icon {
+      display: flex;
+  }
+
+  .menu-icon.active .menu-icon__bar:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+      background-color: #fff;
+  }
+
+  .menu-icon.active .menu-icon__bar:nth-child(2) {
+      opacity: 0;
+  }
+
+  .menu-icon.active .menu-icon__bar:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+      background-color: #fff;
+  }
+
+  /* Ajustes adicionais para responsividade */
+  .hero-content {
+      padding: 0 20px;
+  }
+
+  .cta-button {
+      margin-top: 30px;
+  }
+
+  .services-container {
+      margin-top: 20px;
+  }
+}
+
+/* Estilos da seção de destaque */
+.hero-section {
+  background-image: url('CCP/Images/cercadoscar.png');
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+  text-align: center;
+  background-image: linear-gradient(to bottom, var(--secondary-color), var(--tree-color)), url('CCP/Images/cercadoscar.png'); /* Combine both linear gradient and image */
+}
+
+
+#Cerc {
+  color: #f2f2f2;
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--primary-color); /* Cinza escuro */
+  color: #fff;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+/* Estilos da seção de serviços */
+.services-section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.service {
+  flex-basis: 300px;
+  margin: 20px;
+}
+
+.service img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.service-title {
+  margin-top: 10px;
+}
+
+/* Estilos da seção de galeria */
+.gallery-section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.gallery-container img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-container img:hover {
+  transform: scale(1.1);
+}
+
+/* Estilos para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+  .gallery-container img {
+    width: 100%;
+  }
+}
+
+
+
+
+/* Estilos para o formulário */
+
+.contact-container {
+  display: flexbox;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.contact-info {
+  flex: 1;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info p i {
+  margin-right: 10px;
+}
+
+.contact-form {
+  flex: 2;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  align-items: right; /* Alinha os campos do formulário à direita */
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact-form button {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+/* Alinhar os campos do formulário à direita */
+@media (min-width: 768px) {
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+      width: 90%;
+      margin-left: auto;
+      margin-right: 0; /* Ajustar a margem à direita para 0 */
+  }
+}
+
+/* Estilos da seção de avaliações */
+.reviews-section {
+  background-color: #f2f2f2;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.review {
+  flex-basis: 400px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.review:hover {
+  transform: translateY(-5px);
+}
+
+.review h3 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.review p {
+  color: var(--accent-color);
+}
+
+/* Estilos para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+  .reviews-container {
+    justify-content: flex-start;
+  }
+
+  .review {
+    flex-basis: 100%;
+  }
+}
+
+/* Estilos do footer */
+.footer {
+  background-color: var(--primary-color); /* Cinza escuro */
+  color: #fff;
+  padding: 20px 0; /* Diminui o padding vertical */
+  text-align: center;
+}
+
+/* Estilos para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+  .footer {
+      padding: 10px 0; /* Diminui ainda mais o padding vertical */
+  }
+}
+
+/* Animações */
+@keyframes slideIn {
+  from {
+      transform: translateY(50%);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.hero-content {
+  animation: slideIn 1s ease-in-out;
+}
+
+.service {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.contact-form {
+  animation: slideIn 1s ease-in-out;
+}
+
+.footer {
+  animation: fadeIn 1s ease-in-out;
+}
