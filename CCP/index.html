@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="CSS/business.css">
     <script src="JS/script.js"></script>
     <script src="JS/script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_DE_API&callback=initMap" async defer></script>
 </head>
 <body>
     <header>
@@ -27,26 +28,26 @@
         <div class="hero-content">
             <h1 id="Cerc">Bem-vindo à Cercados Car Power</h1>
             <p>Serviços de alta qualidade para o seu veículo</p>
-            <a href="#" class="cta-button">Agende um serviço</a>
+            <a href="https://wa.me/5511977059854?text=Olá Tudo bem? Vim através do seu site para agendar um serviço!" class="cta-button" target="_blank">Agende um serviço</a>
         </div>
     </section>
     
     <section class="services-section">
         <h2 id="serv">Nossos Serviços</h2>
         <div class="services-container">
-            <div class="service">
+            <div class="service-card">
                 <img src="Images/troca-oleo.jpg" alt="Serviço 1">
-                <h3>Troca de Oleo</h3>
+                <h3>Troca de Óleo</h3>
                 <p>A troca de óleo automotivo é um procedimento essencial para manter o motor do carro funcionando de forma adequada e prolongar sua vida útil.</p>
             </div>
-            <div class="service">
+            <div class="service-card">
                 <img src="Images/revisao-do-carro.jpg" alt="Serviço 2">
                 <h3>Revisão Completa</h3>
                 <p>A revisão completa automotiva é um serviço que consiste em uma análise detalhada de todos os sistemas e componentes essenciais do veículo. Essa revisão abrange
-                     desde o motor e a parte mecânica até os sistemas elétricos, freios, suspensão, pneus e demais itens que compõem o carro.</p>
+                    desde o motor e a parte mecânica até os sistemas elétricos, freios, suspensão, pneus e demais itens que compõem o carro.</p>
             </div>
-            <div class="service">
-                <img src="Images\franquias-servicos-automotivos-2.jpeg" alt="Serviço 3">
+            <div class="service-card">
+                <img src="Images/franquias-servicos-automotivos-2.jpeg" alt="Serviço 3">
                 <h3>Lavagem do Motor</h3>
                 <p>A lavagem do motor automotivo é um procedimento realizado para limpar a 
                     parte externa do compartimento do motor de um veículo. É um serviço essencial para manter a estética e a funcionalidade do motor, 
@@ -75,12 +76,21 @@
             <div class="review">
                 <h3>Levi L</h3>
                 <p>
-                    Ótimo mecânico, da até aula. Muito honesto, fotografa e filma todos os defeitos. Mostra as peças que tirou e as que colocou. Preço justo e facilita o pagamento.</p>
+                    ★★★★★ <br>Ótimo mecânico, da até aula. Muito honesto, fotografa e filma todos os defeitos. Mostra as peças que tirou e as que colocou. Preço justo e facilita o pagamento.</p>
             </div>
             <div class="review">
                 <h3>Wiliam J</h3>
-                <p>Se você procura um excelente serviço e bons preços, pode ir sem medo.</p>
+                <p>★★★★★ <br>Se você procura um excelente serviço e bons preços, pode ir sem medo.</p>
             </div>
+            <div class="review">
+                <h3>Rafael B</h3>
+                <p>★★★★★ <br>Ótima oficina e preço justo</p>
+            </div>
+            <div class="review">
+                <h3>Rayza C</h3>
+                <p>★★★★★ <br>Ótimo serviço, profissional excelente e honesto 🙌🏻</p>
+            </div>
+            
             <!-- Add more reviews here -->
         </div>
     </section>
@@ -88,18 +98,14 @@
     <section class="contact-section">
         <div class="contact-container" id="cont">
             <div class="contact-info">
-                <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua General Porfírio da Paz, 2078 - Vila Bancaria
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.1566399050666!2d-46.51823864752329!3d-23.598714624212242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce678baf48388b%3A0x8ea38f5905b10a30!2sR.%20Gen.%20Porf%C3%ADrio%20da%20Paz%2C%202078%20-%20Vila%20Bancaria%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003918-000!5e0!3m2!1spt-BR!2sbr!4v1688524800028!5m2!1spt-BR!2sbr" width="750" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> <p><i class="fas fa-map-marker-alt">
+                    
+                </i> Endereço: Rua General Porfírio da Paz, 2078 - Vila Bancaria
                     - São Paulo - SP</p>
                 <p><i class="fas fa-phone-alt"></i> Telefone: (11) 97705-9854 ou
                     (11) 2718-8915</p>
                 <p><i class="fas fa-clock"></i> Horário de Atendimento: Seg-Sex, 08:00 - 18:00 e sáb, 08:00 – 14:00</p>
             </div>
-            <form class="contact-form">
-                <input type="text" placeholder="Nome">
-                <input type="email" placeholder="E-mail">
-                <textarea placeholder="Mensagem"></textarea>
-                <button type="submit">Enviar</button>
-            </form>
         </div>
     </section>
     
