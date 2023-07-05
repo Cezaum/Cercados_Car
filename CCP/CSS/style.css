@@ -173,32 +173,55 @@ ul {
   border-radius: 5px;
 }
 
-/* Estilos da seção de serviços */
-.services-section {
-  padding: 50px 0;
+/* Estilos dos cards de serviço */
+#serv {
+  justify-content: center;
   text-align: center;
 }
-
 .services-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 30px;
 }
-
-.service {
-  flex-basis: 300px;
-  margin: 20px;
-}
-
-.service img {
-  width: 100%;
-  height: auto;
+.service-card {
+  background-color: #f2f2f2;
+  padding: 20px;
   border-radius: 5px;
+  margin: 10px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+  
 }
 
-.service-title {
-  margin-top: 10px;
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.service-card h3 {
+  color: var(--primary-color);
+}
+
+/* Animação de escala no hover */
+.service-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Estilos para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 100%;
+  }
 }
 
 /* Estilos da seção de galeria */
@@ -241,7 +264,7 @@ ul {
 /* Estilos para o formulário */
 
 .contact-container {
-  display: flexbox;
+  display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin: 20px auto;
@@ -402,3 +425,51 @@ ul {
 .footer {
   animation: fadeIn 1s ease-in-out;
 }
+
+/* Animação na carga da página (slideIn) */
+@keyframes slideIn {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.cta-button {
+  /* Aplicar a animação slideIn */
+  animation: slideIn 1s ease-in-out;
+}
+
+/* Animação no hover (scaleUp) */
+.cta-button:hover {
+  transform: scale(1.05);
+}
+
+/* Animação no clique (buttonClick) */
+@keyframes buttonClick {
+  0% {
+    background-color: var(--primary-color);
+  }
+  50% {
+    background-color: #f84242; /* Mudar para a cor de destaque desejada */
+  }
+  100% {
+    background-color: var(--primary-color);
+  }
+}
+
+.cta-button:active {
+  /* Aplicar a animação buttonClick ao clicar */
+  animation: buttonClick 0.2s linear;
+}
+
+
+ /* Alinhamento Maps*/
+
+ iframe {
+  justify-content: center;
+  align-items: center;
+ }
